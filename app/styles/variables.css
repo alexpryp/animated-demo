@@ -13,4 +13,12 @@
   --color-gradient-5: #E83EC5;
   --color-gradient-6: #EA3FC4;
   --color-gradient-7: #C6B6EE;
+
+  --gradient-base: var(--color-gradient-1) 2%, var(--color-gradient-1) 18%, var(--color-gradient-1) 20%, var(--color-gradient-2) 35%, var(--color-gradient-3) 50%, var(--color-gradient-4) 70%, var(--color-gradient-5) 90%, var(--color-gradient-6) 98%;
+
+  --gradient-1: linear-gradient(270deg, var(--gradient-base));
+  
+  --transition: all .5s;
+  --transition-mnu: 1s cubic-bezier(.8, 0, .1, 1);
+  --radius: 8px;
 }
