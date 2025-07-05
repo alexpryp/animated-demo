@@ -1,0 +1,16 @@
+:root {
+  --dark: #271a2e;
+
+  --color1: 18, 113, 255; /* #1271FF */
+  --color2: 221, 74, 255; /* #dd4aff */
+  --color3: 100, 220, 255; /* #64dcff */
+  --color4: 140, 100, 255; /* #8c64ff */
+
+  --color-gradient-1: #8E30F6;
+  --color-gradient-2: #9430F2;
+  --color-gradient-3: #A533E9;
+  --color-gradient-4: #C138DA;
+  --color-gradient-5: #E83EC5;
+  --color-gradient-6: #EA3FC4;
+  --color-gradient-7: #C6B6EE;
+}

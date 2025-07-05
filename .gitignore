@@ -1,0 +1,6 @@
+# service files of file managers in operating systems
+.DS_Store
+desktop.ini
+Thumbs.db
+.directory
+*.thumbnail
