@@ -31,6 +31,16 @@ ul {
   margin: 0;
 }
 
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 110px;
+  width: calc(1360px + 30px);
+  max-width: 100%;
+}
+
 .header-top {
   position: fixed;
   top: 0;
@@ -286,4 +296,77 @@ ul {
 .main-menu-background.active {
   opacity: 1;
   visibility: visible;
+}
+
+.accordion {
+  display: flex;
+  gap: 20px;
+}
+
+.accordion__col {
+  position: relative;
+  z-index: 1;
+  height: 82vh;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 210px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.accordion__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.accordion__bg img {
+  display: block;
+}
+
+.accordion__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #180224;
+  opacity: .35;
+}
+
+[data-parallax-target] {
+  height: 120%;
+  width: 110%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  top: -10%;
+  transform-origin: 50% 50%;
+}
+
+.accordion__col.active {
+  width: 100%;
+  flex: 5;
+}
+
+.accordion__start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 20px;
+  transition: var(--transition);
+  transition-delay: .3s;
+}
+
+.accordion__col.active .accordion__start  {
+  opacity: 0;
+  transition-delay: .1s;
+}
+
+.accordion__content {
+  display: none;
 }
