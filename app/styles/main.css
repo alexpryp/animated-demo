@@ -333,7 +333,7 @@ ul {
   position: absolute;
   inset: 0;
   background: #180224;
-  opacity: .35;
+  opacity: .55;
 }
 
 [data-parallax-target] {
@@ -368,5 +368,53 @@ ul {
 }
 
 .accordion__content {
-  display: none;
+  padding: 0 88px;
+}
+
+.accordion__header {
+  overflow: hidden;
+  margin-bottom: 23px;
+  padding-bottom: 10px;
+}
+
+.accordion__header h2 {
+  font-weight: 300;
+  font-size: 100px;
+  line-height: 92%;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+  background: var(--gradient-3);
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 130%) rotate(10deg);
+  transition: var(--transition);
+  transition-duration: 1s;
+}
+
+.accordion__col.active .accordion__header h2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0) rotate(0);
+}
+
+.accordion__description {
+  width: 383px;
+  font-weight: 400;
+  color: #ffeffd;
+  font-size: 20px;
+  line-height: 140%;
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: var(--transition);
+  transition-duration: 1s;
+  font-kerning: none;
+}
+
+.accordion__col.active .accordion__description {
+  opacity: .8;
+  transform: translate(0, 0);
 }

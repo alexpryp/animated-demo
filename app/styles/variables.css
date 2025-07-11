@@ -18,6 +18,7 @@
 
   --gradient-1: linear-gradient(270deg, var(--gradient-base));
   --gradient-2: linear-gradient(0deg, var(--gradient-base));
+  --gradient-3: linear-gradient(94deg, #fff -2%, var(--color-gradient-7) 60%);
   
   --transition: all .5s;
   --transition-mnu: 1s cubic-bezier(.8, 0, .1, 1);
