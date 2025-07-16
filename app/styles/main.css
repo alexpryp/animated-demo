@@ -1,6 +1,7 @@
 @import url(./fonts.css);
 @import url(./animations.css);
 @import url(./variables.css);
+@import url(../vendor/lenis/lenis.css);
 
 * {
   margin: 0;
@@ -81,7 +82,8 @@ ul {
   background: rgba(255, 255, 255, .05);
   border-radius: var(--radius);
   padding: 4px;
-  /*bdf*/
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .top-mnu ul {
@@ -239,7 +241,8 @@ ul {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  /* bdf */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .mnu-button__menu span {
@@ -510,4 +513,75 @@ ul {
 
 .btn-secondary:hover span::after {
   opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .top-line__center {
+    display: none;
+  }
+  .top-line {
+    justify-content: space-between;
+  }
+  .accordion__content {
+    padding: 0 20px;
+  }
+  .accordion__header h2 {
+    font-size: 65px;
+  }
+  .accordion__description {
+    width: 260px;
+    font-size: 16px;
+  }
+  .main-menu {
+    width: 97%;
+  }
+}
+
+@media (max-width: 667.98px) {
+  .accordion {
+    flex-direction: column;
+  }
+  .accordion__description {
+    width: 100%;
+  }
+  .accordion__start {
+    display: none;
+  }
+  .accordion__header h2 {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+  }
+  .accordion__description {
+    opacity: .8;
+    transform: translate(0, 0);
+  }
+  .accordion__content {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  .section-head h2{
+    font-size: 65px;
+  }
+  .gallery__wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gallery {
+    margin-top: 65px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-head {
+    flex-direction: column;
+  }
+  .gallery__wrapper {
+    grid-template-columns: auto;
+  }
+  .main-menu {
+    width: 95%;
+  }
+  .main-menu__inner li a {
+    font-size: 40px;
+  }
 }

@@ -8,9 +8,11 @@ if (burgerMenu) {
     burgerMenu.classList.toggle('active');
 
     if (burgerMenu.classList.contains('active')) {
+      lenis.stop();
       menuBackground.classList.add('active');
       mainMenu.classList.add('active');
     } else {
+      lenis.start();
       menuBackground.classList.remove('active');
       mainMenu.classList.remove('active');
     }
@@ -46,3 +48,13 @@ accordionCol.forEach(col => {
     })
   })
 });
+
+// adding smooth scrolling
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf);
